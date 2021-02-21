@@ -6,6 +6,12 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/blog"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -13,9 +19,14 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/jetstream": "^2.2",
+        "laravel/sanctum": "^2.6",
+        "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.0",
+        "sole-x/blog": "*"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-master",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
