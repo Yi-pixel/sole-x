@@ -1,5 +1,5 @@
 const mix = require('laravel-mix')
-
+const tailwindcss = require('tailwindcss')
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,12 +12,26 @@ const mix = require('laravel-mix')
  */
 
 mix.js(['resources/js/app.js', 'vendor/sole-x/blog/src/resources/js/app.js'], 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-        require('autoprefixer'),
-    ])
+  .postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ])
+mix.sass('vendor/sole-x/blog/src/resources/css/blog.scss', 'css/blog.css')
+
+mix.css('node_modules/highlight.js/styles/atom-one-light.css','css/markdown-theme/light.css')
+mix.css('node_modules/highlight.js/styles/atom-one-dark.css','css/markdown-theme/dark.css')
 
 if (mix.inProduction()) {
-    mix.version()
+  mix.version()
+} else {
+  mix.browserSync({
+    proxy: 'sole-x.localhost',
+    files: [
+      'packages/blog/src/resources/**/*'
+    ],
+    notify: false,
+    open: false,
+  })
+    .disableSuccessNotifications()
 }
