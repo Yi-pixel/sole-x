@@ -3741,6 +3741,7 @@
             },
             "autoload": {
                 "psr-4": {
+                    "SoleX\\Blog\\App\\": "src/app",
                     "SoleX\\Blog\\": "src/"
                 }
             },
