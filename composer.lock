@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8df22b441ff1df182c662e52ed9ae6d5",
+    "content-hash": "e57061d2d35830434c798286a815d4ba",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3749,7 +3749,10 @@
             "dist": {
                 "type": "path",
                 "url": "packages/auth",
-                "reference": "ccb864813f702ee8d0d886347ba28cae7900ba92"
+                "reference": "8d503443da523181fabe33cf3368c82c8c8e6769"
+            },
+            "require": {
+                "php": "^8.1"
             },
             "type": "library",
             "extra": {
@@ -3778,16 +3781,17 @@
         },
         {
             "name": "sole-x/blog",
-            "version": "0.2.0.x-dev",
+            "version": "2.0.1.x-dev",
             "dist": {
                 "type": "path",
                 "url": "packages/blog",
-                "reference": "c71694592d196033297821bc60d21586417c935f"
+                "reference": "a4b181459dd38de8f20a95b2cb342bd921202e1d"
             },
             "require": {
                 "myclabs/php-enum": "^1.8",
-                "php": "^8.0",
+                "php": "^8.1",
                 "sole-x/auth": "*",
+                "spatie/laravel-package-tools": "^1.11",
                 "spatie/once": "^3.0"
             },
             "type": "library",
@@ -3795,20 +3799,19 @@
                 "laravel": {
                     "providers": [
                         "\\SoleX\\Blog\\BlogServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\SettingServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\ThemeServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\LivewireServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\ComponentServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\UserAuthorityServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\CategoryRouterServiceProvider",
-                        "\\SoleX\\Blog\\App\\Providers\\PageRouterServiceProvider"
+                        "\\SoleX\\Blog\\Providers\\SettingServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\ThemeServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\LivewireServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\ComponentServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\UserAuthorityServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\CategoryRouterServiceProvider",
+                        "\\SoleX\\Blog\\Providers\\PageRouterServiceProvider"
                     ],
                     "aliases": []
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "SoleX\\Blog\\App\\": "src/app",
                     "SoleX\\Blog\\": "src/"
                 }
             },
@@ -3822,6 +3825,65 @@
             "transport-options": {
                 "relative": true
             }
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.11.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "baeb3df0ebb3a541394fdaf8cbe6115bf4034a59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/baeb3df0ebb3a541394fdaf8cbe6115bf4034a59",
+                "reference": "baeb3df0ebb3a541394fdaf8cbe6115bf4034a59",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^7.0|^8.0|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.0|^6.23|^7.0",
+                "phpunit/phpunit": "^9.4",
+                "spatie/test-time": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.11.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-03-15T20:01:36+00:00"
         },
         {
             "name": "spatie/once",
@@ -10154,7 +10216,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0"
+        "php": "^8.1"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
