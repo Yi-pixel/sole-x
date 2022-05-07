@@ -19,8 +19,8 @@ mix.js(['resources/js/app.js', 'vendor/sole-x/blog/resources/js/app.js'], 'publi
   ])
 mix.sass('vendor/sole-x/blog/resources/css/blog.scss', 'css/blog.css')
 
-mix.css('node_modules/highlight.js/styles/atom-one-light.css','css/markdown-theme/light.css')
-mix.css('node_modules/highlight.js/styles/atom-one-dark.css','css/markdown-theme/dark.css')
+mix.css('node_modules/highlight.js/styles/atom-one-light.css', 'css/markdown-theme/light.css')
+mix.css('node_modules/highlight.js/styles/atom-one-dark.css', 'css/markdown-theme/dark.css')
 
 if (mix.inProduction()) {
   mix.version()
@@ -28,10 +28,15 @@ if (mix.inProduction()) {
   mix.browserSync({
     proxy: 'sole-x.localhost',
     files: [
-      'packages/blog/resources/**/*'
+      'packages/blog/resources/**/*',
     ],
     notify: false,
     open: false,
   })
     .disableSuccessNotifications()
 }
+mix.webpackConfig({
+  stats: {
+    children: true,
+  },
+})
