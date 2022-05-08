@@ -26,7 +26,7 @@ if (mix.inProduction()) {
   mix.version()
 } else {
   mix.browserSync({
-    proxy: 'sole-x.localhost',
+    proxy: '127.0.0.1:8000',
     files: [
       'packages/blog/resources/**/*',
     ],

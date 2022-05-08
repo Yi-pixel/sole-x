@@ -7,11 +7,11 @@ module.exports = {
     './vendor/laravel/jetstream/**/*.blade.php',
     './storage/framework/views/*.php',
     './resources/views/**/*.blade.php',
-    './vendor/sole-x/blog/resource/views/**/*.blade.php'], theme: {
+    './vendor/sole-x/blog/resource/views/**/*.blade.php',
+    './vendor/sole-x/blog/resource/views/*.blade.php',
+  ],
+  theme: {
     extend: {
-      fontFamily: {
-        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         green: colors.emerald,
         yellow: colors.amber,
@@ -19,6 +19,13 @@ module.exports = {
       },
     },
   },
-
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
