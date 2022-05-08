@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/markdown-theme/dark.css": "/css/markdown-theme/dark.css",
-    "/css/markdown-theme/light.css": "/css/markdown-theme/light.css",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=4bb324df2184017ede89ad9d559e4f82",
+    "/css/markdown-theme/dark.css": "/css/markdown-theme/dark.css?id=a7aebed5fbc671935751ab29f8828f90",
+    "/css/markdown-theme/light.css": "/css/markdown-theme/light.css?id=de87c1d0ff1976aa5e4e3ac0187159d8",
+    "/css/app.css": "/css/app.css?id=16942fd4699923a2a98559d7fd6c845e"
 }
