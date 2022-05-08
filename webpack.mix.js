@@ -17,7 +17,7 @@ mix.js(['resources/js/app.js', 'vendor/sole-x/blog/resources/js/app.js'], 'publi
     require('tailwindcss'),
     require('autoprefixer'),
   ])
-mix.sass('vendor/sole-x/blog/resources/css/blog.scss', 'css/blog.css')
+mix.sass('packages/blog/resources/css/blog.scss', 'css/blog.css')
 
 mix.css('node_modules/highlight.js/styles/atom-one-light.css', 'css/markdown-theme/light.css')
 mix.css('node_modules/highlight.js/styles/atom-one-dark.css', 'css/markdown-theme/dark.css')
