@@ -19,6 +19,12 @@ module.exports = {
       },
     },
   },
+  // 一些样式来自于数据库保存， tailwind css 扫描不到，就会移除，可以添加一个安全列表，让 tailwind css 始终打包这些。
+  safelist:[
+    {
+      pattern:/bg-([a-zA-Z]+)-(\d+)?/
+    }
+  ],
   corePlugins: {
     aspectRatio: false,
   },
