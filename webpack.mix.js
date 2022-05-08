@@ -22,6 +22,10 @@ mix.sass('packages/blog/resources/css/blog.scss', 'css/blog.css')
 mix.css('node_modules/highlight.js/styles/atom-one-light.css', 'css/markdown-theme/light.css')
 mix.css('node_modules/highlight.js/styles/atom-one-dark.css', 'css/markdown-theme/dark.css')
 
+mix.combine([
+  'public/css/*.css',
+], 'public/css/app.css')
+
 if (mix.inProduction()) {
   mix.version()
 } else {
