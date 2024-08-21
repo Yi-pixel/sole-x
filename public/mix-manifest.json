@@ -1,7 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/blog.css": "/css/blog.css",
     "/css/markdown-theme/dark.css": "/css/markdown-theme/dark.css",
     "/css/markdown-theme/light.css": "/css/markdown-theme/light.css",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/css/blog.css": "/css/blog.css"
 }
